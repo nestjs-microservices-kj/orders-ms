@@ -1,0 +1,237 @@
+{
+    "info": {
+        "name": "personal",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "micro",
+            "description": "",
+            "item": [
+                {
+                    "name": "orders",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "get all",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/orders",
+                                    "path": [
+                                        "api",
+                                        "orders"
+                                    ],
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "protocol": "http",
+                                    "port": "3000",
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "create one",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"items\": [\n        {\n            \"productId\": 1,\n            \"price\": 10,\n            \"quantity\": 10\n        }\n    ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/orders",
+                                    "path": [
+                                        "api",
+                                        "orders"
+                                    ],
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "protocol": "http",
+                                    "port": "3000",
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "get by id",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/orders/id/c84de80f-e713-4afd-be41-e272bc819f28",
+                                    "path": [
+                                        "api",
+                                        "orders",
+                                        "id",
+                                        "c84de80f-e713-4afd-be41-e272bc819f28"
+                                    ],
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "protocol": "http",
+                                    "port": "3000",
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "get by ",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/orders/CANCELLED",
+                                    "path": [
+                                        "api",
+                                        "orders",
+                                        "CANCELLED"
+                                    ],
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "protocol": "http",
+                                    "port": "3000",
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "change status",
+                            "description": "",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "PATCH",
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"status\": \"CANCELLED\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:3000/api/orders/c84de80f-e713-4afd-be41-e272bc819f28",
+                                    "path": [
+                                        "api",
+                                        "orders",
+                                        "c84de80f-e713-4afd-be41-e272bc819f28"
+                                    ],
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "protocol": "http",
+                                    "port": "3000",
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        }
+    ],
+    "variable": [],
+    "event": [],
+    "auth": {}
+}
