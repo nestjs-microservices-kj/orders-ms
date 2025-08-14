@@ -8,9 +8,16 @@ steps:
     secretEnv: ["DATABASE_URL"]
 
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "outhamerica-east1-docker.pkg.dev/microservices-469015/images-registry/orders-ms"]
+    args:
+      [
+        "push",
+        "outhamerica-east1-docker.pkg.dev/microservices-469015/images-registry/orders-ms",
+      ]
 
 availableSecrets:
   secretManager:
     - versionName: projects/97488963433/secrets/ORDERS_DATABASE_URL/versions/1
       env: "DATABASE_URL"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
